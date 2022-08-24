@@ -1,12 +1,12 @@
 {
-    "version": "4.4.3.11",
+    "version": "4.4.4.10",
     "description": "qBittorrent BitTorrent client with anti-leech enhancements",
     "homepage": "https://github.com/c0re100/qBittorrent-Enhanced-Edition",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.3.11/qbittorrent_enhanced_4.4.3.11_Qt6_setup.exe#/dl.7z",
-            "hash": "a256dda7112224db67d51b27ad4f85c601dc3ba660439041f1fe233986e03a82"
+            "url": "https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/download/release-4.4.4.10/qbittorrent_enhanced_4.4.4.10_Qt6_setup.exe#/dl.7z",
+            "hash": "73c96fedf6672bd766a77d29a04fd7a233bc099b1d4368b1720ab5c2a69e24eb"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst.exe\" -Force -Recurse",
