@@ -1,0 +1,33 @@
+{
+  "homepage": "https://whalebird.social/",
+  "description": "Whalebird is a Mastodon, Pleroma, and Misskey client for desktop application",
+  "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/4.7.0/Whalebird-4.7.0-windows-x64.exe",
+  "license": "MIT",
+  "bin": "Whalebird.exe",
+  "version": "4.7.0",
+  "architecture": {
+    "64bit": {
+        "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/4.7.0/Whalebird-4.7.0-windows-x64.exe#/dl.7z",
+        "hash": "sha256:c7708124e21f8286fa2874c4a28365f3bc613a4c7c00a42856c6e3836c7503e4",
+        "pre_install": [
+            "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\`$*\" -Force -Recurse"
+        ]
+    }
+},
+"shortcuts": [["Whalebird.exe", "Whalebird"]],
+"checkver": {
+    "github": "https://github.com/h3poteto/whalebird-desktop"
+},
+"autoupdate": {
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/h3poteto/whalebird-desktop/releases/download/$version/Whalebird-$version-windows-x64.exe#/dl.7z",
+            "hash": {
+                "url": "$baseurl/latest.yml",
+                "regex": "sha512:\\s+$base64"
+            }
+        }
+    }
+}
+}
